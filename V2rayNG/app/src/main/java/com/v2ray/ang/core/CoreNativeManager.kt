@@ -60,7 +60,7 @@ object CoreNativeManager {
      */
     fun getLibVersion(): String {
         return try {
-            Libv2ray.checkVersionX()
+            Libv2ray.checkVersionX().replace("Xray-core","X").replace("V2fly-core","V")
         } catch (e: Exception) {
             LogUtil.e(AppConfig.TAG, "Failed to check V2Ray version", e)
             "Unknown"

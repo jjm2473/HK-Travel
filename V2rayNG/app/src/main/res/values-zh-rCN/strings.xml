@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">GPS专业版</string>
     <string name="app_widget_name">开关</string>
     <string name="app_tile_name">开关</string>
-    <string name="app_tile_first_use">初次使用此功能请先用 APP 添加配置</string>
+    <string name="app_tile_first_use">初次使用此功能请先用APP添加卫星</string>
     <string name="navigation_drawer_open">打开导航栏</string>
     <string name="navigation_drawer_close">关闭导航栏</string>
     <string name="migration_success">数据迁移成功!</string>
@@ -21,35 +22,35 @@
     <string name="toast_services_failure">启动服务失败</string>
 
     <!--ServerActivity-->
-    <string name="title_server">配置项</string>
-    <string name="menu_item_add_config">添加配置</string>
-    <string name="menu_item_save_config">保存配置</string>
-    <string name="menu_item_edit_config">编辑配置</string>
-    <string name="menu_item_del_config">删除配置</string>
+    <string name="title_server">GPS卫星</string>
+    <string name="menu_item_add_config">添加卫星</string>
+    <string name="menu_item_save_config">保存卫星</string>
+    <string name="menu_item_edit_config">编辑卫星</string>
+    <string name="menu_item_del_config">删除卫星</string>
     <string name="menu_item_import_config_qrcode">扫描二维码</string>
     <string name="menu_item_import_config_clipboard">从剪贴板导入</string>
     <string name="menu_item_import_config_local">从本地导入</string>
     <string name="menu_item_import_config_policy_group">添加 [策略组]</string>
-    <string name="menu_item_import_config_proxy_chain">添加 [链式代理]</string>
+    <string name="menu_item_import_config_proxy_chain">添加 [星链]</string>
     <string name="menu_item_import_config_manually_vmess">添加 [VMess]</string>
     <string name="menu_item_import_config_manually_vless">添加 [VLESS]</string>
-    <string name="menu_item_import_config_manually_ss">添加 [Shadowsocks]</string>
+    <string name="menu_item_import_config_manually_ss">添加 [SS]</string>
     <string name="menu_item_import_config_manually_socks">添加 [SOCKS]</string>
     <string name="menu_item_import_config_manually_http">添加 [HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">添加 [Trojan]</string>
-    <string name="menu_item_import_config_manually_wireguard">添加 [Wireguard]</string>
-    <string name="menu_item_import_config_manually_hysteria2">添加 [Hysteria2]</string>
+    <string name="menu_item_import_config_manually_wireguard">添加 [WG]</string>
+    <string name="menu_item_import_config_manually_hysteria2">添加 [HY2]</string>
     <string name="del_config_comfirm">确认删除？</string>
     <string name="del_invalid_config_comfirm">删除前请先测试！确认删除？</string>
     <string name="server_lab_remarks">别名 (remarks)</string>
     <string name="server_lab_address">地址 (address)</string>
-    <string name="server_lab_port">端口 (port)</string>
+    <string name="server_lab_port">港口 (port)</string>
     <string name="server_lab_id">用户 ID (id)</string>
     <string name="server_lab_alterid">额外 ID (alterId)</string>
     <string name="server_lab_security">加密方式 (security)</string>
     <string name="server_lab_network">传输协议 (network)</string>
-    <string name="server_lab_more_function">底层传输方式 (transport)</string>
-    <string name="server_lab_head_type">伪装类型 (type)</string>
+    <string name="server_lab_more_function">交通方式 (transport)</string>
+    <string name="server_lab_head_type">面具 (type)</string>
     <string name="server_lab_mode_type">gRPC 传输模式 (mode)</string>
     <string name="server_lab_request_host">伪装域名 (host)</string>
     <string name="server_lab_request_host_http">http host</string>
@@ -67,7 +68,7 @@
     <string name="server_lab_path_quic">QUIC 加密密钥</string>
     <string name="server_lab_path_kcp">kcp seed</string>
     <string name="server_lab_path_grpc">gRPC serviceName</string>
-    <string name="server_lab_stream_security">传输层安全 (TLS)</string>
+    <string name="server_lab_stream_security">交通安全 (TLS)</string>
     <string name="server_lab_stream_fingerprint">Fingerprint</string>
     <string name="server_lab_stream_alpn">Alpn</string>
     <string name="server_lab_allow_insecure">跳过证书验证 (allowInsecure)</string>
@@ -96,16 +97,16 @@
     <string name="toast_none_data">没有数据</string>
     <string name="toast_incorrect_protocol">不正确的协议</string>
     <string name="toast_decoding_failed">解码失败</string>
-    <string name="title_file_chooser">选择一个配置</string>
+    <string name="title_file_chooser">选择一个卫星文件</string>
     <string name="toast_require_file_manager">请安装一个文件管理器</string>
-    <string name="server_customize_config">自定义配置</string>
-    <string name="toast_config_file_invalid">无效的配置</string>
+    <string name="server_customize_config">自定义卫星</string>
+    <string name="toast_config_file_invalid">无效的卫星文件</string>
     <string name="server_lab_content">内容</string>
     <string name="toast_none_data_clipboard">剪贴板中没有数据</string>
     <string name="toast_invalid_url">无效的网址</string>
     <string name="toast_insecure_url_protocol">请不要使用不安全的 HTTP 协议订阅地址</string>
     <string name="server_lab_need_inbound">确保 inbounds port 和设置中的一致</string>
-    <string name="toast_malformed_josn">配置格式错误</string>
+    <string name="toast_malformed_josn">卫星格式错误</string>
     <string name="server_lab_request_host6">Host (SNI) (可选)</string>
     <string name="toast_action_not_allowed">禁止此项操作</string>
     <string name="server_obfs_password">混淆密码</string>
@@ -155,7 +156,7 @@
     <string name="title_settings">设置</string>
     <string name="title_advanced">进阶设置</string>
     <string name="title_core_settings">核心设置</string>
-    <string name="title_vpn_settings">VPN 设置</string>
+    <string name="title_vpn_settings">代理设置</string>
     <string name="title_pref_per_app_proxy">分应用</string>
     <string name="summary_pref_per_app_proxy">常规: 勾选的 App 被代理, 未勾选的直连;\n绕行模式: 勾选的 App 直连, 未勾选的被代理.\n不明白者在菜单中选择自动选中需代理应用</string>
     <string name="title_pref_is_booted">开机时自动连接</string>
@@ -240,8 +241,8 @@
      <string name="title_pref_local_dns_port">本地 DNS 端口</string>
     <string name="summary_pref_local_dns_port">本地 DNS 端口</string>
 
-    <string name="title_pref_confirm_remove">删除配置确认</string>
-    <string name="summary_pref_confirm_remove">删除配置是否需要用户二次确认</string>
+    <string name="title_pref_confirm_remove">删除卫星文件确认</string>
+    <string name="summary_pref_confirm_remove">删除卫星文件是否需要用户二次确认</string>
 
     <string name="title_pref_start_scan_immediate">立即启动扫码</string>
     <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可在工具栏选择扫码或选照片</string>
@@ -265,7 +266,7 @@
     <string name="title_about">关于</string>
     <string name="title_source_code">源代码</string>
     <string name="title_oss_license">Open Source licenses</string>
-    <string name="title_tg_channel">Telegram 频道</string>
+    <string name="title_tg_channel">VIP 频道</string>
 
     <string name="title_pref_promotion">推广</string>
 
@@ -299,8 +300,8 @@
     <string name="title_service_restart">服务重启</string>
     <string name="title_del_all_config">删除配置</string>
     <string name="title_del_duplicate_config">删除重复配置</string>
-    <string name="title_del_invalid_config">删除无效配置</string>
-    <string name="title_export_all">导出配置至剪贴板</string>
+    <string name="title_del_invalid_config">删除无效卫星</string>
+    <string name="title_export_all">导出卫星至剪贴板</string>
     <string name="title_sub_setting">订阅分组设置</string>
     <string name="sub_setting_remarks">备注</string>
     <string name="sub_setting_url">可选地址 (url)</string>
@@ -314,12 +315,12 @@
     <string name="sub_setting_pre_profile_tip">请确保配置别名存在并唯一</string>
     <string name="toast_invalid_update_interval">更新间隔无效，最小值为 15 分钟。</string>
     <string name="title_sub_update">更新订阅</string>
-    <string name="title_real_ping_all_server">测试配置真连接</string>
-    <string name="title_user_asset_setting">资源文件</string>
+    <string name="title_real_ping_all_server">测试全部卫星真连接</string>
+    <string name="title_user_asset_setting">地理信息文件</string>
     <string name="title_sort_by_test_results">按测试结果排序</string>
-    <string name="title_filter_config">过滤配置</string>
+    <string name="title_filter_config">过滤卫星</string>
     <string name="filter_config_all">所有</string>
-    <string name="title_del_duplicate_config_count">删除 %d 个重复配置</string>
+    <string name="title_del_duplicate_config_count">删除 %d 个重复卫星</string>
 
     <string name="title_del_config_count">删除 %d 个配置</string>
     <string name="title_import_config_count">导入 %d 个配置</string>
@@ -358,15 +359,15 @@
     <string name="routing_settings_network_tip">[udp|tcp]</string>
     <string name="routing_settings_outbound_tag">outboundTag</string>
 
-    <string name="connection_test_pending">"检查网络连接"</string>
-    <string name="connection_test_testing">"测试中…"</string>
-    <string name="connection_test_testing_count">测试 %d 个配置中…</string>
+    <string name="connection_test_pending">"检查卫星信号"</string>
+    <string name="connection_test_testing">"检查中…"</string>
+    <string name="connection_test_testing_count">测试 %d 个卫星中…</string>
     <string name="connection_test_available">"连接成功：延时 %d 毫秒"</string>
     <string name="connection_test_error">"失败：%s"</string>
-    <string name="connection_test_fail">"无互联网连接"</string>
+    <string name="connection_test_fail">"GPS 信号弱"</string>
     <string name="connection_test_error_status_code">"状态码无效（#%d）"</string>
-    <string name="connection_connected">"已连接，点击测试连接"</string>
-    <string name="connection_not_connected">"未连接"</string>
+    <string name="connection_connected">"已连接，点击检查卫星信号"</string>
+    <string name="connection_not_connected">"未连接卫星"</string>
     <string name="connection_runing_task_left">运行中的测试任务数：%s</string>
 
     <string name="import_subscription_success">订阅导入成功</string>
@@ -412,7 +413,7 @@
     <string-array name="share_method">
         <item>二维码</item>
         <item>导出至剪贴板</item>
-        <item>导出完整配置至剪贴板</item>
+        <item>导出完整卫星至剪贴板</item>
     </string-array>
 
     <string-array name="share_method_more">
@@ -432,6 +433,9 @@
         <item>VPN</item>
         <item>仅代理</item>
     </string-array>
+    <string name="notification_tag_proxy">骑行</string>
+    <string name="notification_tag_direct">步行</string>
+    <string name="notification_tag_block">障碍</string>
 
     <string-array name="ui_mode_night">
         <item>跟随系统</item>
