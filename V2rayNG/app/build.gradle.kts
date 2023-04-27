@@ -6,14 +6,15 @@ plugins {
 
 android {
     namespace = "com.v2ray.ang"
+    testNamespace = "com.v2ray.ang.test"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.v2ray.ang"
+        applicationId = "com.pro.gps.ang"
         minSdk = 24
         targetSdk = 37
         versionCode = 736
-        versionName = "2.2.6"
+        versionName = "20.2.6"
         multiDexEnabled = true
 
         val abiFilterList = (properties["ABI_FILTERS"] as? String)?.split(';')

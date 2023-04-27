@@ -208,6 +208,18 @@ object NotificationManager {
         text.append("•  ${up.toLong().toSpeedString()}↑  ${down.toLong().toSpeedString()}↓\n")
     }
 
+    private fun tagToName(tag: String?): String? {
+        if (tag == null)
+            return null;
+        val service = getService() ?: return tag
+        return when(tag) {
+            AppConfig.TAG_PROXY -> service.getString(R.string.notification_tag_proxy)
+            AppConfig.TAG_DIRECT -> service.getString(R.string.notification_tag_direct)
+            AppConfig.TAG_BLOCKED -> service.getString(R.string.notification_tag_block)
+            else -> tag
+        }
+    }
+
     /**
      * Updates the speed notification once.
      * Queries traffic stats, separates proxy and direct, and updates the notification.
@@ -255,13 +267,13 @@ object NotificationManager {
         if (!zeroSpeed || !lastZeroSpeed) {
             val text = StringBuilder()
             appendSpeedString(
-                text, AppConfig.TAG_PROXY,
+                text, tagToName(AppConfig.TAG_PROXY),
                 proxyUplink / sinceLastQueryInSeconds,
                 proxyDownlink / sinceLastQueryInSeconds
             )
 
             appendSpeedString(
-                text, AppConfig.TAG_DIRECT,
+                text, tagToName(AppConfig.TAG_DIRECT),
                 directUplink / sinceLastQueryInSeconds,
                 directDownlink / sinceLastQueryInSeconds
             )
