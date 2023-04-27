@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">香港旅游</string>
     <string name="app_widget_name">開關</string>
     <string name="app_tile_name">開關</string>
     <string name="app_tile_first_use">首次使用此功能，請使用此應用程式新增伺服器</string>
@@ -228,5 +229,8 @@
         <item>VPN</item>
         <item>僅 Proxy</item>
     </string-array>
+    <string name="notification_tag_proxy">proxy</string>
+    <string name="notification_tag_direct">direct</string>
+    <string name="notification_tag_block">block</string>
 
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">v2rayNG</string>
+    <string name="app_name" >GPS pro</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -17,6 +17,9 @@
     <string name="toast_services_stop">Stop Services</string>
     <string name="toast_services_success">Start Services Success</string>
     <string name="toast_services_failure">Start Services Failure</string>
+    <string name="notification_tag_proxy">proxy</string>
+    <string name="notification_tag_direct">direct</string>
+    <string name="notification_tag_block">block</string>
 
     <!--ServerActivity-->
     <string name="title_server">Configuration file</string>

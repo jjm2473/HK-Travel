@@ -340,6 +340,18 @@ object V2RayServiceManager {
         return mNotificationManager
     }
 
+    private fun tagToName(tag: String?): String? {
+        if (tag == null)
+            return null;
+        val service = serviceControl?.get()?.getService() ?: return tag
+        return when(tag) {
+            AppConfig.TAG_AGENT -> service.getString(R.string.notification_tag_proxy)
+            AppConfig.TAG_DIRECT -> service.getString(R.string.notification_tag_direct)
+            AppConfig.TAG_BLOCKED -> service.getString(R.string.notification_tag_block)
+            else -> tag
+        }
+    }
+
     private fun startSpeedNotification() {
         if (mSubscription == null &&
                 v2rayPoint.isRunning &&
@@ -358,7 +370,7 @@ object V2RayServiceManager {
                             val up = v2rayPoint.queryStats(it, "uplink")
                             val down = v2rayPoint.queryStats(it, "downlink")
                             if (up + down > 0) {
-                                appendSpeedString(text, it, up / sinceLastQueryInSeconds, down / sinceLastQueryInSeconds)
+                                appendSpeedString(text, tagToName(it), up / sinceLastQueryInSeconds, down / sinceLastQueryInSeconds)
                                 proxyTotal += up + down
                             }
                         }
@@ -367,9 +379,9 @@ object V2RayServiceManager {
                         val zeroSpeed = (proxyTotal == 0L && directUplink == 0L && directDownlink == 0L)
                         if (!zeroSpeed || !lastZeroSpeed) {
                             if (proxyTotal == 0L) {
-                                appendSpeedString(text, outboundTags?.firstOrNull(), 0.0, 0.0)
+                                appendSpeedString(text, tagToName(outboundTags?.firstOrNull()), 0.0, 0.0)
                             }
-                            appendSpeedString(text, TAG_DIRECT, directUplink / sinceLastQueryInSeconds,
+                            appendSpeedString(text, tagToName(TAG_DIRECT), directUplink / sinceLastQueryInSeconds,
                                     directDownlink / sinceLastQueryInSeconds)
                             updateNotification(text.toString(), proxyTotal, directDownlink + directUplink)
                         }

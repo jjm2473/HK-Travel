@@ -14,7 +14,7 @@ class AngApplication : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
+        AppConfig.ANG_PACKAGE = this.baseContext.packageName
 //        LeakCanary.install(this)
 
         val defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)

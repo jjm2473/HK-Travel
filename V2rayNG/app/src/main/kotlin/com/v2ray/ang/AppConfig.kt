@@ -5,7 +5,7 @@ package com.v2ray.ang
  * App Config Const
  */
 object AppConfig {
-    const val ANG_PACKAGE = "com.v2ray.ang"
+    var ANG_PACKAGE = "com.unknown.ang"
     const val DIR_ASSETS = "assets"
 
     // legacy
